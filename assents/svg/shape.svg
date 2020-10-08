@@ -1,0 +1,13 @@
+<svg id="svg_form" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 555.57">
+    <defs>
+    <linearGradient id="Gradiente_sem_nome_174" x1="682" y1="662.3" x2="682" y2="106.73" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#066"/>
+    <stop offset="0.21" stop-color="#006061"/>
+    <stop offset="0.48" stop-color="#005054"/>
+    <stop offset="0.78" stop-color="#00353f"/>
+    <stop offset="1" stop-color="#001d2b"/>
+    </linearGradient>
+    </defs>
+    <!-- <title>svg_form</title> -->
+    <path d="M1062,176.21c0-34.84,2.61-78.35-760-67.9V662c59.08,10.54,105.54-246.38,289.9-286,56.86-12.21,69.17,3.2,130.58-13.06,81.24-21.5,97.68-94.73,189.35-137.11C983.25,192.81,1062,202.33,1062,176.21Z" transform="translate(-302 -106.73)" style="fill:url(#Gradiente_sem_nome_174)"/>
+</svg>
