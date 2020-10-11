@@ -111,11 +111,11 @@ window.addEventListener("load", ()=> {
 
 let prevProj = 0;
 function updateState (progress) {
-    const currProj = (progress / (1/3) + 1).toFixed(0),
+    const currProj = (progress / (1/4) + 1).toFixed(0),
         h = document.querySelector(".number h1"),
         d = document.querySelectorAll(".portfolio_state > div");
 
-    if (prevProj != currProj && currProj < 4) {
+    if (prevProj != currProj && currProj < 5) {
         prevProj = currProj;
         h.innerHTML = "0" + currProj + "/";
         d.forEach((i, k) => {

@@ -1713,6 +1713,7 @@ footer {
 section.work_main {
     display: flex;
     margin-top: 100px;
+    justify-content: space-between;
     // transform: translate3d(0, -25%, -2px) scale(2);
 
     .w_text {
@@ -1864,6 +1865,11 @@ section.work_details {
         border-radius: 18px 18px;
 
         img { width: 100%; height: auto; }
+
+        &.g {
+            img { padding-bottom: 2px; 
+                &:last-child { padding-bottom: 0px; }}
+        }
     }
 
     .action2 {

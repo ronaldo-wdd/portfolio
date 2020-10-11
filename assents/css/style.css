@@ -2197,6 +2197,9 @@ section.work_main {
   display: -ms-flexbox;
   display: flex;
   margin-top: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 section.work_main .w_text {
@@ -2434,6 +2437,14 @@ section.work_details .work {
 section.work_details .work img {
   width: 100%;
   height: auto;
+}
+
+section.work_details .work.g img {
+  padding-bottom: 2px;
+}
+
+section.work_details .work.g img:last-child {
+  padding-bottom: 0px;
 }
 
 section.work_details .action2 {
