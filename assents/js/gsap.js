@@ -25,33 +25,21 @@ window.addEventListener("load", ()=> {
     gsap.from(".state", {
         scrollTrigger: {
             trigger: ".programs",
-            start: "top 60%", //---
-            // toggleActions: "restart none restart none",
+            start: "top 60%",
         },
         width: 0, 
         duration: 1
     });
 
-    /* tech ---
-    gsap.to(".tech", {
-        scrollTrigger: {
-            trigger: ".tech",
-            start: "top 30%",
-            scrub: 1
-        },
-        height: 0
-    });*/
-    
+    // tech ---
     setTimeout(()=> {
         gsap.to("._row", {
             scrollTrigger: {
                 trigger: ".tech",
                 scrub: 1,
                 start: "top bottom+=100",
-                // end: "bottom-=40%", ---
                 end: "bottom top",
                 toggleClass: { targets: "._cont", className: "active" },
-                // markers: true
             },
             x: "-45%"
         });
@@ -74,10 +62,8 @@ window.addEventListener("load", ()=> {
                 trigger: "#projects",
                 pin: true,
                 pinSpacing: false,
-                // markers: true,
                 scrub: .5,
                 snap: 1/ (projs.length),
-                // end: ()=> "+=" + document.querySelector("#projects").offsetHeight,
                 end: "bottom bottom",
                 toggleClass: { targets: ".header", className: "onPortfolio" },
                 onUpdate: self => updateState(self.progress)

@@ -408,16 +408,6 @@ ul {
           transform: translate(-50%, -56%);
 }
 
-.carrousel .proj .img.website, .projects .proj .img.website {
-  /*&::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                background-image: url(../images/site_bg.png);
-            }*/
-}
-
 .carrousel .proj .img.website img:last-child, .projects .proj .img.website img:last-child {
   position: relative;
   width: 100%;
@@ -505,16 +495,6 @@ ul {
   }
 }
 
-/*@media screen and (min-width: 1400px) {
-    .container {
-      width: 1370px;
-    }
-}
-@media screen and (min-width: 1600px) {
-    .container {
-        width: 1570px;
-    }
-}*/
 @media screen and (min-width: 1900px) {
   .container {
     max-width: 1600px;
@@ -550,7 +530,6 @@ header .nav-bar .burguer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  /*open menu*/
 }
 
 header .nav-bar .burguer .nav-link {
@@ -1117,13 +1096,9 @@ section.home .top svg #line path {
 
 section.home .top svg:hover {
   cursor: pointer;
-  /*& #triangle path{
-                    transform: translate(-649.75px, -362px);
-                }*/
 }
 
 section.home .top svg.toTop {
-  /*go to top*/
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
   -webkit-transform: rotate(180deg);
@@ -1132,9 +1107,6 @@ section.home .top svg.toTop {
 
 section.home .top svg.toTop #triangle, section.home .top svg.toTop #line {
   fill: #001D2B;
-  /*path {
-                        animation: none;
-                    }*/
 }
 
 @media (max-width: 768px) {
@@ -1150,16 +1122,6 @@ section.home .top svg.toTop #triangle, section.home .top svg.toTop #line {
 section.about {
   position: relative;
   z-index: 2;
-  /*.svg_shape {
-        position: absolute;
-        top: -50px;
-        left: 0;
-        width: $bottom-element-w;
-
-        &.fixed{
-            position: fixed;
-        }
-    }*/
 }
 
 section.about ._title {
@@ -1658,55 +1620,10 @@ section.portfolio ._background.fixed h1 {
 }
 
 section.portfolio_mobile {
-  /*/ mobile screen
-    ._background.mobile {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to top, rgba(0,29,43,0.86),rgba(0,102,102,0.86) 78%);
-        // background: linear-gradient(to bottom, $green_aqua, rgba(0, 64, 71, 0.96) 20%, #002935, #001d2b);
-        transform: skewY(-2.5deg);
-        // 
-        display: none;
-    }*/
   background: #ffffff;
   display: none;
   position: relative;
   z-index: 3;
-}
-
-section.portfolio_mobile div.mobile {
-  /*/ -- Graphic design --
-        .gd_works {
-            .work {
-                &::before {
-                    padding-top: calc(100% - 30px); 	// initial ratio of 1:1
-                }
-
-                ._content {
-                    padding: 5% 6% 0 6%;
-                    h3 {
-                        margin-bottom: 8.5%;
-                    }
-                    img {
-                        height: 30%;
-                        width: auto;
-                        margin-bottom: 5.5%;
-                        margin-left: 50%;
-                        transform: translateX(-50%);
-                    }
-                }
-
-                ._button {
-                    bottom: 0;
-                    transform: translate(-50%, 50%);
-                    &:hover {
-                        transform: translate(-50%, calc(50% - 5px));
-                    }
-                    // box-shadow: 0px 2px 6px 0px #000000;
-                }
-            }
-        }*/
 }
 
 section.portfolio_mobile div.mobile .title {
@@ -1757,10 +1674,6 @@ section.portfolio_mobile div.mobile .gd_works .work, section.portfolio_mobile di
   margin-bottom: 60px;
   -webkit-transition: all .3s;
   transition: all .3s;
-  /*&::before {
-                    content: "";
-                    display: block;
-                }*/
 }
 
 section.portfolio_mobile div.mobile .gd_works .work .bg, section.portfolio_mobile div.mobile .wd_works .work .bg {
@@ -1833,7 +1746,6 @@ section.portfolio_mobile div.mobile .wd_works .work {
 
 section.portfolio_mobile div.mobile .wd_works .work .before {
   padding-top: 72.65%;
-  /* initial ratio of ~ 4:3 (75%)*/
   position: relative;
 }
 
@@ -1858,14 +1770,6 @@ section.portfolio_mobile div.mobile .wd_works .work ._content ._img .web {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   z-index: 3;
-  /*&:hover {
-                                // z-index: 3;
-                                img {
-                                    transform: rotate(0);
-                                    width: 132%;
-                                    height: 118%;
-                                }
-                            }*/
 }
 
 section.portfolio_mobile div.mobile .wd_works .work ._content ._img .web img {
@@ -1888,14 +1792,6 @@ section.portfolio_mobile div.mobile .wd_works .work ._content ._img .mobile {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   z-index: 2;
-  /*&:hover {
-                                z-index: 3;
-                                img {
-                                    transform: rotate(0);
-                                    width: 132%;
-                                    height: 118%;
-                                }
-                            }*/
 }
 
 section.portfolio_mobile div.mobile .wd_works .work ._content ._img .mobile img {
@@ -2568,7 +2464,6 @@ svg {
 
 .instagram:hover svg {
   padding: 15%;
-  /* width: calc(100% - 30%)!important; */
 }
 
 .instagram:hover .ig-cls-2 {

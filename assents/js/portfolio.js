@@ -6,12 +6,9 @@ $(document).ready(function(){
         vertical: true,
         verticalSwiping: true,
         infinite: false,
-        // autoplay: true,
         autoplaySpeed: 7000,
-        // pauseOnHover: false,
         arrows: false,
         dots: false,
-        // fade: true,
         speed: 700,
         waitForAnimate: true,
     });
@@ -65,8 +62,7 @@ document.addEventListener('scroll', function () {
         if ( scrollYp !== oldScrollYp || scrollYn !== oldScrollYn) {
             oldScrollYp = scrollYp;
             oldScrollYn = scrollYn;
-            if (scrollYp == false || scrollYn == false){ // se scrollPos >= PortfolioH
-                // console.log(scrollYp+", "+ scrollYn);
+            if (scrollYp == false || scrollYn == false){
                 console.log(portfolioFixed);
             }
         }
@@ -76,8 +72,7 @@ document.addEventListener('scroll', function () {
         if ( portfolioFixed ) {
             window.scrollTo(0, portfolio.offsetTop);
             $('.header').addClass('onPortfolio');
-            $(window).on('wheel', mouseWheelHandler); // portfolioSlide();
-            // console.log("fixed: " + scrollYp +", "+ scrollYn);
+            $(window).on('wheel', mouseWheelHandler);
         } else {
             $('.header').removeClass('onPortfolio');
             $(window).off('wheel', mouseWheelHandler);
@@ -89,8 +84,6 @@ function getScrollYpPerm() {
     var portfolioPos = portfolio.offsetTop;
     var scrollP = Math.round(window.scrollY);
     
-    // verificar permicao para scrollY+ && scrollY-
-    // if (scrollP >= portfolioPos && scrollP <= (portfolioPos+portfolioH)) {
     if (scrollP >= portfolioPos) {
         var portfolioSlickPos = $('#projects').slick('slickCurrentSlide'),
             portfolioSlickCount = $('#projects').slick('getSlick').slideCount -1;
@@ -98,22 +91,15 @@ function getScrollYpPerm() {
         if ( portfolioSlickPos == portfolioSlickCount )
             return true;
         else return false;
-
-        // if ( portfolioSlickPos <= portfolioSlickCount ) 
-        //     return true;
-        // else return false;
     } else return true;
 }
 function getScrollYnPerm() {
     var portfolioPos = portfolio.offsetTop,
         scrollP = Math.round(window.scrollY);
 
-    // console.log("scrollP: "+scrollP + " portfolioPos: "+ portfolioPos);
-
     // verificar permicao para scrollY+ && scrollY-
     if (scrollP == portfolioPos) {
         var portfolioSlickPos = $('#projects').slick('slickCurrentSlide');
-        // console.log("Slick currPos: "+ portfolioSlickPos);
 
         if ( portfolioSlickPos == 0 )
             return true;
@@ -124,11 +110,8 @@ function getScrollYnPerm() {
 
 var scrollPos = 0;
 function getPortfolioPosFixed() {
-    // var currScrollPos = document.body.getBoundingClientRect().top;
     var currScrollPos = Math.round(window.scrollY);
-
-    // var dir = scrollDir(currScrollPos);
-
+    
     if (!scrollYp && !scrollYn) {
         scrollPos = currScrollPos;
         return true;
@@ -145,38 +128,16 @@ function getPortfolioPosFixed() {
         return true;
     }
     else { 
-        // console.log("ups :( -> scrollYp: " + scrollYp + ", scrollYn: " + scrollYn);
-        // console.log("currScrollPos: " + currScrollPos + ", scrollPos: " + scrollPos);
         scrollPos = currScrollPos;
         return false; 
     }
 }
 
-function scrollDir(currScrollPos) {
-    if(currScrollPos > scrollPos ) { 
-        scrollPos = currScrollPos;
-        console.log("down");
-        return "down";
-    } 
-    else { 
-        scrollPos = currScrollPos; 
-        console.log("up");
-        return "up"; 
-    } 
-}; 
 
 var sliding = false;
 const $slider = $("#projects");
-/*function portfolioSlide() {
-    $(window).on('wheel', mouseWheelHandler);
-    // window.addEventListener("scroll", function(event){
-    //     event.preventDefault;
-    // });
-}*/
 
 function mouseWheelHandler(event) {
-	// event.preventDefault();
-	// const $slider = event.data.$slider;
 	const $slider = $('#projects');
     const delta = event.originalEvent.deltaY; // normalize value of deltaY (to -1/1)
     if(sliding == false) {

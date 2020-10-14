@@ -53,8 +53,6 @@ function interactCarrousel(index) {
     carrousel(index);
 }
 
-// window.addEventListener("load", carrousel(0, true));
-// carrousel();
 
 // ------ SLICK ------ //
 $(document).ready(initSlick());
@@ -78,8 +76,6 @@ function initSlick() {
         speed: 700,
         waitForAnimate: true,
         infinite: true,
-        // dots: true, 
-        // fade: true,
         responsive : [
             {
                 breakpoint: 768,
@@ -98,5 +94,4 @@ function initSlick() {
     w < 768 
     ? $('#carrousel').slick('unslick')
     : initSlick();
-    // console.log(w);))
 }));

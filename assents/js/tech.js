@@ -29,7 +29,6 @@ let c = true;
             var div = document.createElement("div"),
                 elems = createElems();
 
-            // div.className = "_row";
             elems.forEach(el => div.appendChild(el));
             
             return div;
