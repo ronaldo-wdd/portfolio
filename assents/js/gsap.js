@@ -66,7 +66,7 @@ window.addEventListener("load", ()=> {
                 snap: 1/ (projs.length),
                 end: "bottom bottom",
                 toggleClass: { targets: ".header", className: "onPortfolio" },
-                onUpdate: self => updateState(self.progress)
+                onUpdate: self => updateState(self.progress, projs.length)
             }
         });
 
@@ -96,12 +96,12 @@ window.addEventListener("load", ()=> {
 
 
 let prevProj = 0;
-function updateState (progress) {
-    const currProj = (progress / (1/4) + 1).toFixed(0),
+function updateState (progress, projLgth) {
+    const currProj = (progress / (1/projLgth) + 1).toFixed(0),
         h = document.querySelector(".number h1"),
         d = document.querySelectorAll(".portfolio_state > div");
 
-    if (prevProj != currProj && currProj < 5) {
+    if (prevProj != currProj && currProj < (projLgth + 1)) {
         prevProj = currProj;
         h.innerHTML = "0" + currProj + "/";
         d.forEach((i, k) => {
