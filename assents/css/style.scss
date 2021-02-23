@@ -1546,9 +1546,6 @@ section.work_details {
         transition: all 0.45s;
 
         ._button {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             border: 1px solid $green_aqua;
             box-shadow: none;
             text-shadow: none;
@@ -1558,6 +1555,29 @@ section.work_details {
 
         p { margin: 0; color: $green_aqua; white-space: nowrap }
 
+        .btns {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            a:last-child {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                width: 32px;
+                height: 32px;
+                margin-left: 20px;
+                border: 1px solid #006666;
+                border-radius: 100% 100%;
+                overflow: hidden;
+                transition: all .3s;
+
+                img { height: 75%; }
+
+                &:hover { background-color: #fff; }
+            }
+        }
+        
         a {
             display: flex;
             align-items: center;
@@ -1649,7 +1669,10 @@ section.work_details {
                     &.m { display: flex }
                 }
             }
-            ._button:hover { box-shadow: 0 0 4px #00000088 }
+            ._button {
+                min-width: fit-content;
+                &:hover { box-shadow: 0 0 4px #00000088 }}
+            .btns a:last-child { margin-left: 10px; }
         }
         .container { max-width: 100%; padding: 0 }
     }
